@@ -49,7 +49,7 @@ const formCheck = () => {
     e.preventDefault()
     // trim input value
     const inputs = document.querySelectorAll('.check-input')
-    var isValidated = true
+    let isValidated = true
     inputs.forEach(input => {
       input.value = input.value.trim()
       const result = checkInput(input.id)
