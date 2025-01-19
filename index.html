@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration</h1>
+
+      <form id="registration-form" action="#" method="POST">
+        <label for="name">Full Name</label>
+        <input class="check-input" type="text" id="name" required />
+        <p class="validation" id="name-validation">Full name is required</p>
+
+        <label for="email">Email</label>
+        <input class="check-input" type="email" id="email" required />
+        <p class="validation" id="email-validation">Email is invalid</p>
+
+        <label for="password">Password</label>
+        <input class="check-input" type="password" id="password" required />
+        <p class="validation" id="password-validation">Password is required</p>
+
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          class="check-input"
+          type="password"
+          id="confirm-password"
+          required
+        />
+        <p class="validation" id="confirm-password-validation">
+          Passwords do not match
+        </p>
+
+        <fieldset>
+          <legend>Gender</legend>
+          <label
+            ><input
+              class="check-input"
+              id="gender"
+              type="radio"
+              name="gender"
+              value="male"
+              required
+            />Male</label
+          >
+          <label
+            ><input type="radio" name="gender" value="female" />Female</label
+          >
+          <label><input type="radio" name="gender" value="other" />Other</label>
+        </fieldset>
+        <p class="validation" id="gender-validation">Gender is required</p>
+
+        <!--birthday-->
+        <label for="birthday">Date of Brith</label>
+        <input
+          class="check-input"
+          type="date"
+          id="birthday"
+          name="birthday"
+          required
+        />
+        <p class="validation" id="birthday-validation">Birthday is required</p>
+
+        <!--terms-->
+        <label class="terms-label"
+          ><input
+            class="check-input"
+            type="checkbox"
+            name="terms"
+            id="terms"
+            required
+          />I agree to the Terms and Conditions</label
+        >
+        <p class="validation" id="terms-validation">
+          You need to agree with the terms and condition
+        </p>
+
+        <button id="submit-button" type="submit">Register</button>
+      </form>
+    </div>
+    <!--js-->
+    <script src="index.js"></script>
+  </body>
+</html>

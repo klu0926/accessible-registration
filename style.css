@@ -1,0 +1,103 @@
+:root {
+  --primary-color: rgb(39, 137, 248);
+  --primary-dark-color: rgb(48, 94, 180);
+  --container-color: white;
+  --background-color: rgb(238, 236, 236);
+  --wrong-color: red;
+  --correct-color: rgb(39, 137, 248);
+}
+
+body {
+  background-color: var(--background-color);
+  color: rgb(85, 85, 85);
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px 30px 40px 30px;
+  background-color: var(--container-color);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 10px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  margin: 0px;
+  padding: 6px;
+}
+
+fieldset {
+  display: flex;
+  margin: 0px;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+fieldset label {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+fieldset:has(input.input-wrong) {
+  border: 2px solid var(--wrong-color);
+}
+
+fieldset:has(input.input-correct) {
+  border: 2px solid var(--correct-color);
+}
+
+.terms-label {
+  display: flex;
+  gap: 10px;
+}
+
+.validation {
+  margin: 0;
+  font-size: 12px;
+  color: var(--wrong-color);
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.input-wrong {
+  border: 2px solid var(--wrong-color);
+}
+
+.input-correct {
+  border: 2px solid var(--correct-color);
+}
+
+button[type='submit'] {
+  font-size: 15px;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+button[type='submit']:hover {
+  background-color: var(--primary-dark-color);
+}
